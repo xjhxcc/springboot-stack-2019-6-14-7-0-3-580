@@ -22,12 +22,7 @@ public class EmployeesControllerTest {
     @Test
     public void should_return_employees_when_call_getAllEmployees() throws Exception {
         mockMvc.perform(get("/employees/selectAllEmployee")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().contentType("application/json;charset=UTF-8")).andExpect(content().json("[{\n" +
-                "\t\"id\":1,\n" +
-                "\t\"name\":\"xiaoming\",\n" +
-                "\t\"age\":20,\n" +
-                "\t\"gender\":\"male\"\n" +
-                "}]"));
+                .andExpect(content().contentType("application/json;charset=UTF-8")).andExpect(content().json("[{\"id\":0,\"name\":\"aa\",\"age\":12,\"gender\":\"男\"}]"));
 
     }
 
